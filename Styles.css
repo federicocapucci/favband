@@ -1,17 +1,16 @@
-audio {
-    display: none;
-}
-
-li a {
-    color: white;
-}
-
-a {
-    color: white;
-    text-decoration: none;
+* {
+    line-height: 2;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 400;
 }
 
 body {
+    max-width: 80em;
+    min-width: 240px;
+    margin: auto;
+    padding: 0;
+    background-color: black;
     position: relative;
     background: url(https://i.pinimg.com/originals/67/26/25/672625e65928894c85db901e91782d92.jpg);
     background-repeat: repeat;
@@ -31,10 +30,6 @@ body {
     }
 }
 
-li {
-    list-style-image: url(/guiticon.png);
-}
-
 .page {
     position: relative;
     background: linear-gradient(180deg, black, #444, black);
@@ -47,27 +42,19 @@ li {
     border: 3px solid #111;
     min-width: 300px;
     box-shadow: 18px 13px 31px 1px rgba(140, 140, 140, 0.75);
-}
-
-body {
-    max-width: 80em;
-    min-width: 240px;
-    margin: auto;
-    padding: 0;
-    background-color: black;
+    border-radius: 10px;
 }
 
 .logo {
-    opacity: 0;
+    opacity: 1;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0 20px 0;
     width: 15%;
     min-width: 50px;
-    animation: fade-in 8s infinite;
-    animation-direction: alternate;
-    animation-delay: 1.5s;
+    animation: fade-in 16s infinite ease-in-out alternate;
+    animation-delay: -1s;
     z-index: -10;
     border-radius: 100%;
 }
@@ -77,10 +64,111 @@ body {
         opacity: 0;
         transform: scale(0);
     }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
     100% {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.nav {
+    color: #EEE;
+    text-align: right;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 800;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(90, 30, 30, 1), rgba(55, 55, 55, 1));
+    z-index: 3;
+}
+
+.menu ul {
+    margin: 0 50px 0 30px;
+}
+
+.menu li {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    color: #ccc;
+    margin: 0px;
+    padding: 5px;
+}
+
+.menu li:hover {
+    display: inline-block;
+    background-color: #222;
+    color: #555;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+li div {
+    display: none;
+    transition: 0.5s;
+    text-align: center;
+}
+
+li:hover>div {
+    position: block;
+    clear: both;
+    padding: 0 10px;
+    display: inline-block;
+    padding-left: 3px;
+    font-size: 10px;
+    transition: 0.5s;
+    color: rgba(90, 30, 30, 1);
+    text-align: center;
+}
+
+.homebutton {
+    color: rgb(250, 100, 100);
+    letter-spacing: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.homebutton:hover {
+    display: block;
+    color: #DDD;
+    background-color: rgba(90, 30, 30, 1);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label {
+    margin: 0 4px 0 0;
+    font-size: 26px;
+    line-height: 50px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+audio {
+    display: none;
+}
+
+li a {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style-image: url(/guiticon.png);
 }
 
 .firstpic {
@@ -89,15 +177,16 @@ body {
 }
 
 h3 {
-    background: linear-gradient(45deg, rgba(55, 55, 55, 1), rgba(255, 255, 255, 0.5), rgba(55, 55, 55, 1));
+    background: linear-gradient(45deg, rgba(55, 55, 55, 1), rgba(80, 15, 15, 0.5), rgba(55, 55, 55, 1));
     color: white;
     padding: 5px;
 }
 
 h3:hover {
     background-color: #333;
-    color: yellow;
+    color: #eee;
     padding: 5px;
+    text-shadow: 3px 2px rgba(90, 30, 30, 1)q;
 }
 
 h3::first-letter {
@@ -106,16 +195,18 @@ h3::first-letter {
 }
 
 img.galeria {
+    display: flex;
     justify-content: space-evenly;
     position: relative;
-    display: flex;
     box-sizing: border-box;
     max-width: 1440px;
+    min-width: 295px;
     margin: auto;
     margin-top: 10px;
     width: 80%;
     flex-wrap: wrap;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .videos {
@@ -133,87 +224,8 @@ pre {
     text-overflow: clip;
 }
 
-* {
-    line-height: 2;
-    /*font-family: 'Yesteryear';*/
-    font-size: 18px;
-    line-height: 2;
-    border-radius: 10px;
-    font-weight: 100;
-}
-
 p {
     margin: 4px;
-}
-
-.homebutton {
-    color: yellow;
-}
-
-.nav {
-    color: #EEE;
-    text-align: right;
-    height: 50px;
-    line-height: 50px;
-    font-weight: 800;
-    position: sticky;
-    top: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1), rgba(55, 55, 55, 1));
-    z-index: 3;
-}
-
-.menu ul {
-    margin: 0 50px 0 30px;
-}
-
-.menu li {
-    display: inline-block;
-    list-style: none;
-    text-decoration: none;
-    color: #ddd;
-    margin: 0px;
-    line-height: 30px;
-    padding: 6px;
-}
-
-.menu li:hover {
-    background-color: #222;
-    color: #333;
-}
-
-li div {
-    display: none;
-    transition: 0.5s;
-    text-align: center;
-}
-
-li:hover>div {
-    position: block;
-    clear: both;
-    padding: 0 10px;
-    display: inline-block;
-    padding-left: 3px;
-    font-size: 10px;
-    transition: 0.5s;
-    color: yellow;
-    text-align: center;
-}
-
-.homebutton {
-    color: #54D17A;
-}
-
-label {
-    margin: 0 4px 0 0;
-    font-size: 26px;
-    line-height: 50px;
-    display: none;
-    width: 26px;
-    float: right;
-}
-
-#toggle {
-    display: none;
 }
 
 footer {
@@ -248,6 +260,12 @@ footer a:hover {
     color: white;
     border-radius: 5%;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 1440px) {
+    .page {
+        opacity: 0.96;
+    }
 }
 
 @media only screen and (max-width: 520px) {
@@ -308,7 +326,7 @@ footer a:hover {
         display: block;
     }
     .homebutton {
-        color: #54D17A;
+        color: rgb(250, 100, 100);
     }
     .logo {
         position: absolute;
@@ -340,5 +358,8 @@ footer a:hover {
         bottom: 3px;
         font-weight: 800;
         padding: 0 0 10px;
+    }
+    body {
+        opacity: 0.95;
     }
 }
