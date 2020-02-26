@@ -12,10 +12,23 @@ a {
 }
 
 body {
+    position: relative;
     background: url(https://i.pinimg.com/originals/67/26/25/672625e65928894c85db901e91782d92.jpg);
     background-repeat: repeat;
     background-size: 320px;
     width: 100%;
+    animation: animate 60s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    to {
+        background-position-x: 100%;
+        background-position-y: 45%;
+    }
 }
 
 li {
@@ -33,6 +46,7 @@ li {
     margin: auto;
     border: 3px solid #111;
     min-width: 300px;
+    box-shadow: 18px 13px 31px 1px rgba(140, 140, 140, 0.75);
 }
 
 body {
@@ -48,9 +62,9 @@ body {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px 0 40px 0;
+    padding: 20px 0 20px 0;
     width: 15%;
-    min-width: 40px;
+    min-width: 50px;
     animation: fade-in 8s infinite;
     animation-direction: alternate;
     animation-delay: 1.5s;
@@ -121,10 +135,10 @@ pre {
 
 * {
     line-height: 2;
-    font-family: 'Yesteryear';
+    /*font-family: 'Yesteryear';*/
     font-size: 18px;
     line-height: 2;
-    border-radius: 1%;
+    border-radius: 10px;
     font-weight: 100;
 }
 
