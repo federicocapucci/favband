@@ -1,4 +1,5 @@
 * {
+    font-family: 'IBM Plex Sans', sans-serif;
     line-height: 2;
     font-size: 18px;
     line-height: 2;
@@ -34,7 +35,6 @@ body {
     position: relative;
     background: linear-gradient(180deg, black, #444, black);
     color: white;
-    font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -121,8 +121,8 @@ li:hover>div {
     padding-left: 3px;
     font-size: 10px;
     transition: 0.5s;
-    color: rgba(90, 30, 30, 1);
     text-align: center;
+    color: rgba(90, 30, 30, 1);
 }
 
 .homebutton {
@@ -262,9 +262,19 @@ footer a:hover {
     text-decoration: none;
 }
 
+a:hover {
+    color: rgb(255, 220, 0);
+    transition: all 0.2s ease-in;
+}
+
 @media only screen and (max-width: 1440px) {
     .page {
         opacity: 0.96;
+    }
+    .videos {
+        position: relative;
+        display: block;
+        left: 15%;
     }
 }
 
@@ -301,7 +311,7 @@ footer a:hover {
     }
     .menu li {
         display: block;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid #333;
         margin: 0;
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
@@ -315,7 +325,7 @@ footer a:hover {
         display: block;
         border-bottom: 1px solid #333;
         margin: 0;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(, 0, 0, 0.8);
         color: white;
         font-size: 14px;
         line-height: 1.5;
@@ -340,6 +350,11 @@ footer a:hover {
         box-sizing: border-box;
         padding: 0;
         border-radius: 50%;
+    }
+    .videos {
+        position: relative;
+        display: block;
+        left: 15%;
     }
     footer {
         background-color: #333;
