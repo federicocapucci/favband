@@ -1,3 +1,4 @@
+/* Normalizer */
 * {
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 2;
@@ -20,6 +21,7 @@ body {
     animation: animate 60s linear infinite;
 }
 
+/* background animation */
 @keyframes animate {
     from {
         background-position-x: 0;
@@ -30,6 +32,7 @@ body {
         background-position-y: 45%;
     }
 }
+
 
 .page {
     position: relative;
@@ -325,7 +328,7 @@ a:hover {
         display: block;
         border-bottom: 1px solid #333;
         margin: 0;
-        background-color: rgba(, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0.8);
         color: white;
         font-size: 14px;
         line-height: 1.5;
